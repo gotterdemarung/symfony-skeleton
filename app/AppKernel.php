@@ -15,6 +15,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
+            new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
@@ -22,8 +23,15 @@ class AppKernel extends Kernel
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle($this),
+            new FOS\UserBundle\FOSUserBundle(),
             new FOS\RestBundle\FOSRestBundle(),
+            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
+
+            // Styles
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
+            new ManyMules\ManyMulesFontAwesomeBundle\ManyMulesFontAwesomeBundle(),
+
+            new MH\SkeletonBundle\MHSkeletonBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

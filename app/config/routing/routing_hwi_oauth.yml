@@ -1,0 +1,14 @@
+facebook_login:
+    pattern: /login/check-facebook
+
+google_login:
+    pattern: /login/check-google
+
+linked_in_login:
+    pattern: /login/check-linked-in
+
+twitter_login:
+    pattern: /login/check-twitter
+
+windows_live_login:
+    pattern: /login/check-windows-live

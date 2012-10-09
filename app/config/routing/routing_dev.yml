@@ -1,3 +1,6 @@
+_mh_skeleton_bundle:
+    resource: "@MHSkeletonBundle/Resources/config/routing.yml"
+
 _wdt:
     resource: "@WebProfilerBundle/Resources/config/routing/wdt.xml"
     prefix:   /_wdt

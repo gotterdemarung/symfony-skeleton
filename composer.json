@@ -1,16 +1,18 @@
 {
-    "name": "symfony/framework-standard-edition",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "name": "mhlavac/symfony-mhlavac-skeleton",
+    "description": "Symfony skeleton with prepared users and twitter boostrap",
     "autoload": {
         "psr-0": { "": "src/" }
     },
     "require": {
-        "php": ">=5.3.3",
+        "php": ">=5.4.4",
+        "ext-mongo": "*",
         "ext-memcache": "*",
         "ext-memcached": "*",
         "symfony/symfony": "2.1.*",
-        "doctrine/orm": ">=2.2.3,<2.4-dev",
+        "doctrine/orm": ">=2.3.0,<2.4-dev",
         "doctrine/doctrine-bundle": "1.0.*",
+        "doctrine/mongodb-odm-bundle": "3.0.0-BETA3",
         "doctrine/doctrine-migrations-bundle": "dev-master",
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "twig/extensions": "1.0.*",
@@ -27,8 +29,11 @@
         "friendsofsymfony/rest-bundle": "dev-master",
         "ornicar/gravatar-bundle": "dev-master",
         "stof/doctrine-extensions-bundle": "dev-master",
+        "hwi/oauth-bundle": "*",
+
         "mopa/bootstrap-bundle": "dev-master",
         "twitter/bootstrap": "master",
+        "manymules/fontawesome-bundle": "*",
         "thomas-mcdonald/bootstrap-sass": "dev-master",
 
         "publero/test": "dev-master"
