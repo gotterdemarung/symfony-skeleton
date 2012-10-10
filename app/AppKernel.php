@@ -26,6 +26,7 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
 
             // Styles
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),

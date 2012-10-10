@@ -31,6 +31,10 @@
         "stof/doctrine-extensions-bundle": "dev-master",
         "hwi/oauth-bundle": "*",
 
+        "knplabs/knp-paginator-bundle": "dev-master",
+        "knplabs/knp-menu-bundle": "dev-master",
+        "craue/formflow-bundle": "dev-master",
+
         "mopa/bootstrap-bundle": "dev-master",
         "twitter/bootstrap": "master",
         "manymules/fontawesome-bundle": "*",

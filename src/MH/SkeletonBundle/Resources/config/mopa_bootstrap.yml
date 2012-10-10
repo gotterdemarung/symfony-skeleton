@@ -1,0 +1,13 @@
+services:
+    mh.skeleton_bundle.mopa_bootstrap.navbar:
+        class: %mopa_bootstrap.navbar.generic%
+        arguments:
+            # first argument: a named array of menues:
+            - { leftmenu: ~, rightmenu: ~ }
+            # second argument: a named array of FormType Classes
+            - { searchform: ~ }
+            # third argument: a named array of options
+            - { title: "MHSkeleton", titleRoute: "homepage", fixedTop: true, isFluid: true, template:MopaBootstrapBundle:Navbar:navbar.html.twig }
+        tags:
+            # The alias is used to retrieve the navbar in templates
+            - { name: mopa_bootstrap.navbar, alias: frontendNavbar }

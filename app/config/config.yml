@@ -8,3 +8,4 @@ imports:
     - { resource: partial/twig.yml }
     - { resource: partial/hwi_oauth.yml }
     - { resource: partial/fos_user.yml }
+    - { resource: partial/mopa_bootstrap.yml }

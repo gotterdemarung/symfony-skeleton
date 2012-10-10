@@ -1,11 +1,30 @@
 {% extends 'MopaBootstrapBundle::layout.html.twig' %}
 
+{% block title -%}
+    MH Symfony2 Skeleton
+{%- endblock %}
+
 {% block navbar %}
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="#">MHHlavac Symfony2 Skeleton</a>
+                <ul class="nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
-{% block title -%}
-    title
-{%- endblock %}
+{% block container %}
+    <div style="margin-top: 48px;" class="container">
+        <h1>Welcome to MH Symfony2 Skeleton ;-)</h1>
+        <p>This skeleton provides basic functionality for most of the webs... It's based on comunity work and lots of great bundles which will be noted... ;-)</p>
+    </div>
+{% endblock %}
 
 {% block head_style -%}
     {% stylesheets
