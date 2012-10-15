@@ -4,4 +4,4 @@ fos_user:
     user_class: MH\SkeletonBundle\Entity\User
     registration:
         form:
-            type: mh_skeleton_form_type_user_registration
+            type: mh_user_form_type_user_registration

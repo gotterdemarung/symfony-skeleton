@@ -1,5 +1,5 @@
 <?php
-namespace MH\SkeletonBundle\Form\Type;
+namespace MH\UserBundle\Form\Type;
 
 use FOS\UserBundle\Form\Type\RegistrationFormType as BaseFormType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -21,6 +21,6 @@ class RegistrationFormType extends BaseFormType
 
     public function getName()
     {
-        return 'mh_skeleton_form_type_user_registration';
+        return 'mh_user_form_type_user_registration';
     }
 }
