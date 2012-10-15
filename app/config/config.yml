@@ -1,5 +1,6 @@
 imports:
     - { resource: parameters.yml }
+    - { resource: parameters_local.yml }
     - { resource: security.yml }
     - { resource: partial/framework.yml }
     - { resource: partial/assetic.yml }

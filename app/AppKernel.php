@@ -27,12 +27,15 @@ class AppKernel extends Kernel
             new FOS\RestBundle\FOSRestBundle(),
             new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Ornicar\GravatarBundle\OrnicarGravatarBundle(),
 
             // Styles
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
             new ManyMules\ManyMulesFontAwesomeBundle\ManyMulesFontAwesomeBundle(),
 
+            // MH Skeleton bundles
             new MH\SkeletonBundle\MHSkeletonBundle(),
+            new MH\UserBundle\MHUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

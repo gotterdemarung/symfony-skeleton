@@ -1,0 +1,68 @@
+{% extends 'MopaBootstrapBundle::layout.html.twig' %}
+
+{% block title -%}
+    MH Symfony2 Skeleton
+{%- endblock %}
+
+{% block navbar %}
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="{{ path('homepage') }}">MHSkeletonBundle</a>
+                <div class="pull-left">
+                    {{ knp_menu_render('MHSkeletonBundle:NavBarBuilder:leftMenu', {'class': 'nav', 'currentClass': 'active', 'ancestorClass': 'active', 'allow_safe_labels': 'true'}) }}
+                </div>
+                <div class="pull-right">
+                    {% if app.user %}
+                        <ul class="nav">
+                            <li>
+                                {% set gravatarSize = 18 %}
+                                <a href=""><img src="{{ gravatar(app.user.email, gravatarSize) }}" width="{{ gravatarSize }}" height="{{ gravatarSize }}" /> {{ app.user.usernameCanonical }}</a>
+                            </li>
+                            <li class="divider-vertical"></li>
+                        </ul>
+                    {% endif %}
+                    {{ knp_menu_render('MHSkeletonBundle:NavBarBuilder:rightMenu', {'class': 'nav', 'currentClass': 'active', 'ancestorClass': 'active', 'allow_safe_labels': 'true'}) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block container %}
+    <div style="margin-top: 48px;" />
+    {% block content %}
+    {% endblock %}
+{% endblock %}
+
+{% block head_style -%}
+    {% stylesheets
+        '@MopaBootstrapBundle/Resources/public/sass/mopabootstrapbundle.scss'
+    %}
+    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
+    {% endstylesheets %}
+{%- endblock head_style %}
+
+{% block foot_script %}
+    {% javascripts
+        '@MopaBootstrapBundle/Resources/bootstrap-sass/vendor/assets/javascripts/bootstrap-transition.js'
+        '@MopaBootstrapBundle/Resources/bootstrap-sass/vendor/assets/javascripts/bootstrap-modal.js'
+        '@MopaBootstrapBundle/Resources/bootstrap-sass/vendor/assets/javascripts/bootstrap-dropdown.js'
+        '@MopaBootstrapBundle/Resources/bootstrap-sass/vendor/assets/javascripts/bootstrap-scrollspy.js'
+        '@MopaBootstrapBundle/Resources/bootstrap-sass/vendor/assets/javascripts/bootstrap-tab.js'
+        '@MopaBootstrapBundle/Resources/bootstrap-sass/vendor/assets/javascripts/bootstrap-tooltip.js'
+        '@MopaBootstrapBundle/Resources/bootstrap-sass/vendor/assets/javascripts/bootstrap-popover.js'
+        '@MopaBootstrapBundle/Resources/bootstrap-sass/vendor/assets/javascripts/bootstrap-alert.js'
+        '@MopaBootstrapBundle/Resources/bootstrap-sass/vendor/assets/javascripts/bootstrap-button.js'
+        '@MopaBootstrapBundle/Resources/bootstrap-sass/vendor/assets/javascripts/bootstrap-collapse.js'
+        '@MopaBootstrapBundle/Resources/bootstrap-sass/vendor/assets/javascripts/bootstrap-carousel.js'
+        '@MopaBootstrapBundle/Resources/bootstrap-sass/vendor/assets/javascripts/bootstrap-typeahead.js'
+        '@MopaBootstrapBundle/Resources/public/js/mopabootstrap-collection.js'
+        '@MopaBootstrapBundle/Resources/public/js/mopabootstrap-subnav.js'
+        '@MopaBootstrapBundle/Resources/public/js/html5bp_plugins.js'
+        '@MopaBootstrapBundle/Resources/public/js/html5bp_script.js'
+        output='js/foot_compiled.js'
+    %}
+        <script src="{{ asset_url }}" />
+    {% endjavascripts %}
+{% endblock %}
