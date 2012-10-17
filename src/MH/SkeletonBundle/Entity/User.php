@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="user_user")
+ * @ORM\Table(name="_user")
  */
 class User extends BaseUser
 {
@@ -16,6 +16,11 @@ class User extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+
+    /**
+     * @ORM\Column(name="facebook_id", type="string", nullable=true)
+     */
+    private $facebookId;
 
     public function __construct()
     {
@@ -36,5 +41,24 @@ class User extends BaseUser
         $this->setUsernameCanonical($emailCanonical);
 
         return $this;
+    }
+
+    /**
+     * @param string $facebookId
+     * @return User
+     */
+    public function setFacebookId($facebookId)
+    {
+        $this->facebookId = $facebookId;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFacebookId()
+    {
+        return $facebookId;
     }
 }

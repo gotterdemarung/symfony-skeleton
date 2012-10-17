@@ -20,7 +20,7 @@ class NavBarBuilder extends ContainerAware
     {
         $menu = $factory->createItem('root');
 
-        $menu->setChildrenAttribute('class', 'nav');
+        $menu->setChildrenAttribute('class', 'dropdown-menu');
 
         if ($this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY')) {
             $menu->addChild('logout', ['route' => 'fos_user_security_logout']);

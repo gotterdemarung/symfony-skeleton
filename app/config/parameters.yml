@@ -17,3 +17,18 @@ parameters:
 
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    facebook_id: EnterValueInParametersLocal
+    facebook_secret: EnterValueInParametersLocal
+
+    google_id: EnterValueInParametersLocal
+    google_secret: EnterValueInParametersLocal
+
+    linked_in_id: EnterValueInParametersLocal
+    linked_in_secret: EnterValueInParametersLocal
+
+    twitter_id: EnterValueInParametersLocal
+    twitter_secret: EnterValueInParametersLocal
+
+    windows_live_id: EnterValueInParametersLocal
+    windows_live_secret: EnterValueInParametersLocal

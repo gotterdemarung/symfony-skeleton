@@ -10,19 +10,22 @@
             <div class="container">
                 <a class="brand" href="{{ path('homepage') }}">MHSkeletonBundle</a>
                 <div class="pull-left">
-                    {{ knp_menu_render('MHSkeletonBundle:NavBarBuilder:leftMenu', {'class': 'nav', 'currentClass': 'active', 'ancestorClass': 'active', 'allow_safe_labels': 'true'}) }}
+                    {{ knp_menu_render('MHSkeletonBundle:NavBarBuilder:leftMenu', {'currentClass': 'active', 'ancestorClass': 'active', 'allow_safe_labels': 'true'}) }}
                 </div>
                 <div class="pull-right">
                     {% if app.user %}
                         <ul class="nav">
-                            <li>
-                                {% set gravatarSize = 18 %}
-                                <a href=""><img src="{{ gravatar(app.user.email, gravatarSize) }}" width="{{ gravatarSize }}" height="{{ gravatarSize }}" /> {{ app.user.usernameCanonical }}</a>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    {% set gravatarSize = 18 %}
+                                    <img src="{{ gravatar(app.user.email, gravatarSize) }}" width="{{ gravatarSize }}" height="{{ gravatarSize }}" />
+                                    {{ app.user.usernameCanonical }}
+                                    <b class="caret"></b>
+                                </a>
+                                {{ knp_menu_render('MHSkeletonBundle:NavBarBuilder:rightMenu', {'class': 'nav', 'currentClass': 'active', 'ancestorClass': 'active', 'allow_safe_labels': 'true'}) }}
                             </li>
-                            <li class="divider-vertical"></li>
                         </ul>
                     {% endif %}
-                    {{ knp_menu_render('MHSkeletonBundle:NavBarBuilder:rightMenu', {'class': 'nav', 'currentClass': 'active', 'ancestorClass': 'active', 'allow_safe_labels': 'true'}) }}
                 </div>
             </div>
         </div>
@@ -46,6 +49,7 @@
 
 {% block foot_script %}
     {% javascripts
+        '@MHSkeletonBundle/Resources/public/js/*'
         '@MopaBootstrapBundle/Resources/bootstrap-sass/vendor/assets/javascripts/bootstrap-transition.js'
         '@MopaBootstrapBundle/Resources/bootstrap-sass/vendor/assets/javascripts/bootstrap-modal.js'
         '@MopaBootstrapBundle/Resources/bootstrap-sass/vendor/assets/javascripts/bootstrap-dropdown.js'
@@ -64,6 +68,6 @@
         '@MopaBootstrapBundle/Resources/public/js/html5bp_script.js'
         output='js/foot_compiled.js'
     %}
-        <script src="{{ asset_url }}" />
+        <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
 {% endblock %}

@@ -7,6 +7,10 @@ hwi_oauth_redirect:
     resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
     prefix:   /connect
 
+_hwi_oauth_login:
+    resource: "routing_hwi_oauth.yml"
+    prefix:   /login
+
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
