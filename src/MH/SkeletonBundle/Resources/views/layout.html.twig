@@ -13,8 +13,8 @@
                     {{ knp_menu_render('MHSkeletonBundle:NavBarBuilder:leftMenu', {'currentClass': 'active', 'ancestorClass': 'active', 'allow_safe_labels': 'true'}) }}
                 </div>
                 <div class="pull-right">
-                    {% if app.user %}
-                        <ul class="nav">
+                    <ul class="nav">
+                        {% if app.user %}
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                     {% set gravatarSize = 18 %}
@@ -24,8 +24,12 @@
                                 </a>
                                 {{ knp_menu_render('MHSkeletonBundle:NavBarBuilder:rightMenu', {'class': 'nav', 'currentClass': 'active', 'ancestorClass': 'active', 'allow_safe_labels': 'true'}) }}
                             </li>
-                        </ul>
-                    {% endif %}
+                        {% else %}
+                            <li>
+                                <a href="{{ path('fos_user_security_login') }}">{{ 'login'|trans }}</a>
+                            </li>
+                        {% endif %}
+                    </ul>
                 </div>
             </div>
         </div>

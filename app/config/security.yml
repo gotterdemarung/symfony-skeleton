@@ -29,7 +29,6 @@ security:
                     windows_live: "/login/check-windows-live"
                 login_path: "/login"
                 failure_path: "/login"
-
                 oauth_user_provider:
                     service: hwi_oauth.user.provider.fosub_bridge
             pattern: ^/
