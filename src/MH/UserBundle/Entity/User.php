@@ -1,5 +1,5 @@
 <?php
-namespace MH\SkeletonBundle\Entity;
+namespace MH\UserBundle\Entity;
 
 use FOS\UserBundle\Entity\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
@@ -60,5 +60,32 @@ class User extends BaseUser
     public function getFacebookId()
     {
         return $facebookId;
+    }
+
+    /**
+     * @param string $name
+     * @param string $value
+     * @return User
+     */
+    public function setOAuthProperty($name, $value)
+    {
+        switch ($name) {
+            case 'facebookId':
+                $this->setFacebookId($value);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param string $name
+     * @return string
+     */
+    public function getOAuthProperty($name)
+    {
+        switch ($name) {
+            case 'facebookId':
+                return $this->getFacebookId();
+        }
     }
 }

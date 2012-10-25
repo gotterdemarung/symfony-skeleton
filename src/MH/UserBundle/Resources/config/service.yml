@@ -1,3 +1,6 @@
+parameters:
+    hwi_oauth.user.provider.fosub_bridge.class: MH\UserBundle\Security\Core\User\MHUserProvider
+
 services:
     mh.skeleton.form.type.user_registration:
         class: MH\UserBundle\Form\Type\RegistrationFormType
