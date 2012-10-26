@@ -8,5 +8,10 @@ build/
 vendor
 bin
 composer.phar
-*.sublime-workspace
 app/config/parameters_local.yml
+
+# Sublime 2 IDE
+*.sublime-workspace
+
+# Eclipse IDE
+.refactorings
