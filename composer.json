@@ -1,5 +1,5 @@
 {
-    "name": "mhlavac/symfony-mhlavac-skeleton",
+    "name": "mhlavac/symfony-skeleton",
     "description": "Symfony skeleton with prepared users and twitter boostrap",
     "autoload": {
         "psr-0": { "": "src/" }

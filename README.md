@@ -6,6 +6,15 @@ builds on that and adds more bundles, components and libraries to speed up your 
 
 Main goal here is to avoid doing things again for each time when you start new project.
 
+How to start?
+-------------
+
+Composer is used as a packaging component for Symfony skeleton bundle. You can start by creating a new project:
+
+``` sh
+composer create-project mhlavac/symfony-skeleton your_new_web
+```
+
 Virtual LAMP server
 -------------------
 
