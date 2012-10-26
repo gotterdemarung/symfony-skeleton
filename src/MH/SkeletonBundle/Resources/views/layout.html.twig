@@ -10,19 +10,19 @@
             <div class="container">
                 <a class="brand" href="{{ path('homepage') }}">MHSkeletonBundle</a>
                 <div class="pull-left">
-                    {{ knp_menu_render('MHSkeletonBundle:NavBarBuilder:leftMenu', {'currentClass': 'active', 'ancestorClass': 'active', 'allow_safe_labels': 'true'}) }}
+                    {{ knp_menu_render('MHSkeletonBundle:NavBarBuilder:leftMenu', {'currentClass': 'active', 'ancestorClass': 'active', 'allow_safe_labels': 'true', 'template': 'MHSkeletonBundle:Menu:knp_menu.html.twig'}) }}
                 </div>
                 <div class="pull-right">
                     <ul class="nav">
                         {% if app.user %}
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                    {% set gravatarSize = 18 %}
-                                    <img src="{{ gravatar(app.user.email, gravatarSize) }}" width="{{ gravatarSize }}" height="{{ gravatarSize }}" />
+                                    {% set gravatarSize = 26 %}
+                                    <img class="gravatar" src="{{ gravatar(app.user.email, gravatarSize) }}" width="{{ gravatarSize }}" height="{{ gravatarSize }}" />
                                     {{ app.user.usernameCanonical }}
                                     <b class="caret"></b>
                                 </a>
-                                {{ knp_menu_render('MHSkeletonBundle:NavBarBuilder:rightMenu', {'class': 'nav', 'currentClass': 'active', 'ancestorClass': 'active', 'allow_safe_labels': 'true'}) }}
+                                {{ knp_menu_render('MHSkeletonBundle:NavBarBuilder:rightMenu', {'class': 'nav', 'currentClass': 'active', 'ancestorClass': 'active', 'allow_safe_labels': 'true', 'template': 'MHSkeletonBundle:Menu:knp_menu.html.twig'}) }}
                             </li>
                         {% else %}
                             <li>
@@ -37,7 +37,7 @@
 {% endblock %}
 
 {% block container %}
-    <div style="margin-top: 48px;" />
+    <div class="content-start"></div>
     {% block content %}
     {% endblock %}
 {% endblock %}
@@ -46,6 +46,7 @@
     {% stylesheets
         '@MopaBootstrapBundle/Resources/public/sass/mopabootstrapbundle.scss'
         '@ManyMulesFontAwesomeBundle/Resources/public/css/font-awesome.css'
+        '@MHSkeletonBundle/Resources/public/css/main.sass'
     %}
     <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
     {% endstylesheets %}

@@ -1,5 +1,5 @@
 {
-    "hash": "d546bedd6060d6913ea92715561216b9",
+    "hash": "0f9e531f05987a8ec598376a6ede4c61",
     "packages": [
         {
             "name": "craue/formflow-bundle",
@@ -902,12 +902,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/l3pp4rd/DoctrineExtensions.git",
-                "reference": "3033d7ecc6633b20bec3e9bcc2336219f3818068"
+                "reference": "c1b29053224b7ddf5496e434e2bd7dc258db4731"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/l3pp4rd/DoctrineExtensions/zipball/3033d7ecc6633b20bec3e9bcc2336219f3818068",
-                "reference": "3033d7ecc6633b20bec3e9bcc2336219f3818068",
+                "url": "https://github.com/l3pp4rd/DoctrineExtensions/zipball/c1b29053224b7ddf5496e434e2bd7dc258db4731",
+                "reference": "c1b29053224b7ddf5496e434e2bd7dc258db4731",
                 "shasum": ""
             },
             "require": {
@@ -918,7 +918,7 @@
                 "doctrine/orm": ">=2.1",
                 "doctrine/mongodb-odm": "*"
             },
-            "time": "1351156694",
+            "time": "1351233998",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2424,12 +2424,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/symfony/symfony.git",
-                "reference": "1277e6746b2333338124ad0574fa7d5b8c77c47c"
+                "reference": "5155aecb3ac85597d7a70ac57899c860a6031501"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/symfony/zipball/1277e6746b2333338124ad0574fa7d5b8c77c47c",
-                "reference": "1277e6746b2333338124ad0574fa7d5b8c77c47c",
+                "url": "https://github.com/symfony/symfony/zipball/5155aecb3ac85597d7a70ac57899c860a6031501",
+                "reference": "5155aecb3ac85597d7a70ac57899c860a6031501",
                 "shasum": ""
             },
             "require": {
@@ -2478,7 +2478,7 @@
                 "propel/propel1": "dev-master",
                 "monolog/monolog": "1.*"
             },
-            "time": "1351170710",
+            "time": "1351255755",
             "type": "library",
             "extra": {
                 "branch-alias": {
