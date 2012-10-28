@@ -9,6 +9,10 @@ parameters:
     database_name:     ~
     database_user:     ~
     database_password: ~
+    
+    mongodb.default.server: mongodb://localhost:27017
+    mongodb.default.options: {}
+    mongodb.default.database: application
 
     mailer_transport:  smtp
     mailer_host:       localhost

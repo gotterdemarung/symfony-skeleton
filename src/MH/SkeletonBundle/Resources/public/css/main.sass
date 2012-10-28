@@ -17,7 +17,7 @@ $gradientDark: #E6E6E6
     +background-image(linear-gradient($gradientLight, $gradientDark))
     
 h1,h2,h3,h4,h5,h6
-    +text-shadow(rgba(black, .1) 2px 2px 0)
+    +text-shadow(darken($gradientDark, 10%) 2px 2px 0)
 
 .navbar
     .gravatar
