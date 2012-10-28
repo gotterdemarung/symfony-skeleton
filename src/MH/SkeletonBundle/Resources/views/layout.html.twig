@@ -40,6 +40,10 @@
     <div class="content-start"></div>
     {% block content %}
     {% endblock %}
+
+    {% block footer %}
+        {% include 'MHSkeletonBundle::footer.html.twig' %}
+    {% endblock %}
 {% endblock %}
 
 {% block head_style -%}
