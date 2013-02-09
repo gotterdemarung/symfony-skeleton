@@ -1,6 +1,7 @@
 <?php
 namespace MH\UserBundle\Security\Core\User;
 
+use Doctrine\DBAL\DBALException;
 use HWI\Bundle\OAuthBundle\OAuth\Response\UserResponseInterface;
 use HWI\Bundle\OAuthBundle\Security\Core\Exception\AccountNotLinkedException;
 use HWI\Bundle\OAuthBundle\Security\Core\User\FOSUBUserProvider;
@@ -11,8 +12,8 @@ class MHUserProvider extends FOSUBUserProvider
     {
         $oAuthPropertyName = $this->getProperty($response);
         $username = $response->getUsername();
-        $user = $this->userManager->findUserBy([$oAuthPropertyName => $username]);
 
+        $user = $this->userManager->findUserBy([$oAuthPropertyName => $username]);
         if (null !== $user) {
             return $user;
         }
@@ -34,7 +35,7 @@ class MHUserProvider extends FOSUBUserProvider
 
         try {
             $this->userManager->updateUser($user);
-        } catch (\Doctrine\DBAL\DBALException $exception) {
+        } catch (DBALException $exception) {
             throw new AccountNotLinkedException(sprintf("User '%s' could not be crated.", $username), null, 0, $exception);
         }
 
