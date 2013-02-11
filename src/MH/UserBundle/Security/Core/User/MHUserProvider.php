@@ -36,7 +36,7 @@ class MHUserProvider extends FOSUBUserProvider
         try {
             $this->userManager->updateUser($user);
         } catch (DBALException $exception) {
-            throw new AccountNotLinkedException(sprintf("User '%s' could not be crated.", $username), null, 0, $exception);
+            throw new AccountNotLinkedException(sprintf("User '%s' could not be created.", $username), null, 0, $exception);
         }
 
         return $user;
