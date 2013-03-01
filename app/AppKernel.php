@@ -31,7 +31,7 @@ class AppKernel extends Kernel
 
             // Styles
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
-            new ManyMules\ManyMulesFontAwesomeBundle\ManyMulesFontAwesomeBundle(),
+            new Bmatzner\FontAwesomeBundle\BmatznerFontAwesomeBundle(),
 
             // MH Skeleton bundles
             new MH\SkeletonBundle\MHSkeletonBundle(),
