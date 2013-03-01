@@ -3,6 +3,8 @@
 #
 
 parameters:
+    application_version: 1.0.0
+
     database_driver:   pdo_mysql
     database_host:     ~
     database_port:     ~
