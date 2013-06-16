@@ -2,16 +2,22 @@ web/js
 web/css
 web/bundles/
 app/bootstrap.php.cache
+app/config/parameters_local.yml
 app/cache/*
 app/logs/*
 build/
 vendor
 bin
 composer.phar
-app/config/parameters_local.yml
 
 # Sublime 2 IDE
 *.sublime-workspace
 
-# Eclipse IDE
+# Eclipse IDE - Needed because every PDT version might work differently
 .refactorings
+.buildpath
+.settings
+.project
+
+# Local files
+*.local

@@ -26,7 +26,6 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
-            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Ornicar\GravatarBundle\OrnicarGravatarBundle(),
 
             // Styles
