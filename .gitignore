@@ -9,6 +9,7 @@ build/
 vendor
 bin
 composer.phar
+dist/
 
 # Sublime 2 IDE
 *.sublime-workspace
