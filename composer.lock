@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "1e3b1db8af3b643e7e4ad66c47f953dc",
+    "hash": "a2757e54740c725cdf2ac9ce478a0c57",
     "packages": [
         {
             "name": "bmatzner/fontawesome-bundle",
@@ -1980,12 +1980,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpMenu.git",
-                "reference": "7baf621fb77867e49daca7dd72b443ea232cb5e1"
+                "reference": "6e3d276aef1d621249c23e0321f9737b45dc5084"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/7baf621fb77867e49daca7dd72b443ea232cb5e1",
-                "reference": "7baf621fb77867e49daca7dd72b443ea232cb5e1",
+                "reference": "6e3d276aef1d621249c23e0321f9737b45dc5084",
                 "shasum": ""
             },
             "require": {
@@ -2036,7 +2036,7 @@
                 "menu",
                 "tree"
             ],
-            "time": "2013-06-24 00:02:29"
+            "time": "2013-05-20 16:52:41"
         },
         {
             "name": "knplabs/knp-menu-bundle",
@@ -2045,12 +2045,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpMenuBundle.git",
-                "reference": "85b68c523fa7148886bda26f97952fa499a5049d"
+                "reference": "f090ba579745484f73e22877f0b59a6039645f65"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/85b68c523fa7148886bda26f97952fa499a5049d",
-                "reference": "85b68c523fa7148886bda26f97952fa499a5049d",
+                "reference": "f090ba579745484f73e22877f0b59a6039645f65",
                 "shasum": ""
             },
             "require": {
@@ -2090,7 +2090,7 @@
             "keywords": [
                 "menu"
             ],
-            "time": "2013-06-24 00:00:50"
+            "time": "2013-05-25 11:24:09"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -3426,6 +3426,7 @@
         "doctrine/doctrine-migrations-bundle": 20,
         "doctrine/doctrine-fixtures-bundle": 20,
         "ornicar/gravatar-bundle": 20,
+        "knplabs/knp-menu": 20,
         "knplabs/knp-menu-bundle": 20,
         "sp/bower-bundle": 20,
         "mopa/bootstrap-bundle": 20,

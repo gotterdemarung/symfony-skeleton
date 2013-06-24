@@ -31,8 +31,9 @@
         "ornicar/gravatar-bundle": "dev-master",
         "stof/doctrine-extensions-bundle": "1.1.*",
         "hwi/oauth-bundle": "0.3.*",
-        "knplabs/knp-menu-bundle": "2.0.*@dev",
-        "sp/bower-bundle": "0.7.*@dev",
+        "knplabs/knp-menu": "dev-master#6e3d276aef1d621249c23e0321f9737b45dc5084",
+        "knplabs/knp-menu-bundle": "dev-master#f090ba579745484f73e22877f0b59a6039645f65",
+        "sp/bower-bundle": "0.8.*@dev",
 
         "mopa/bootstrap-bundle": "dev-master",
         "twitter/bootstrap": "master",
